@@ -33,7 +33,7 @@ diff --git a/include/configs/stm32f746-disco.h b/include/configs/stm32f746-disco
 index 45343d2323..07ef11f63c 100644
 --- a/include/configs/stm32f746-disco.h
 +++ b/include/configs/stm32f746-disco.h
-@@ -51,12 +51,18 @@
+@@ -51,13 +51,18 @@
  
  #include <config_distro_bootcmd.h>
  #define CONFIG_EXTRA_ENV_SETTINGS				\
@@ -44,8 +44,8 @@ index 45343d2323..07ef11f63c 100644
 -			"pxefile_addr_r=0xC0428000\0" \
 -			"ramdisk_addr_r=0xC0438000\0"		\
 +			"pxefile_addr_r=0xC0008000\0" \
-+			"ipaddr=192.168.0.123\0" \
-+			"serverip=192.168.0.122\0" \
++			"ipaddr=192.168.1.123\0" \
++			"serverip=192.168.1.6\0" \
 +			"dtb_file=stm32f769/stm32f769-disco.dtb\0" \
 +			"kernel_file=stm32f769/zImage\0" \
 +			"fdt_addr_r=0xc0300000\0" \

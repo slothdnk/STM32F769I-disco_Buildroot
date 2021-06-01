@@ -3,8 +3,9 @@ url_buildroot = https://github.com/buildroot/buildroot.git
 dir_external = $(PREFIX)/STM32F769I-disco_Buildroot
 dir_buildroot = $(PREFIX)/buildroot
 dir_output = $(dir_buildroot)/output
-release_tag = 2020.05
+release_tag = 2021.02.2
 tftp_dir = /srv/tftp/stm32f769/
+kernel_ver = 5.6.15
 
 bootstrap:
 	@echo "Downloading buildroot to $(PREFIX)"
@@ -16,7 +17,7 @@ bootstrap:
 linux-rebuild:
 	make linux-rebuild -C $(dir_buildroot)
 	cp $(dir_buildroot)/output/images/zImage $(tftp_dir)
-	cp $(dir_buildroot)/output/build/linux-5.6.15/arch/arm/boot/dts/stm32f769-disco.dtb $(tftp_dir)
+	cp $(dir_buildroot)/output/build/linux-$(kernel_ver)/arch/arm/boot/dts/stm32f769-disco.dtb $(tftp_dir)
 
 build:
 	make -C $(dir_buildroot)

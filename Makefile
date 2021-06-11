@@ -5,7 +5,7 @@ dir_buildroot = $(PREFIX)/buildroot
 dir_output = $(dir_buildroot)/output
 release_tag = 2021.02.2
 tftp_dir = /srv/tftp/stm32f769/
-kernel_ver = 5.6.15
+kernel_ver = 5.10.35
 
 bootstrap:
 	@echo "Downloading buildroot to $(PREFIX)"
